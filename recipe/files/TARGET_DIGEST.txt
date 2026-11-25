@@ -1,0 +1,9 @@
+image_manifest_digest=sha256:3462077840ba492828e31c29d7670a9b8f59a72f01d2255f6bc0fe1e02c7698e
+config_digest=sha256:d00abab513d818c09a94ba818d8631f3338ad61406884a58353c6118ef7bcac4
+tag=readystack/python:3.15.2-CE-ubuntu24.04-r5
+probe_port=80
+probe_path=/
+probe_timeout=180
+probe_exec=python3 -c 'pass'
+verify_boot=skip
+verify_boot_reason=this image is a language runtime with no long-running service; the digest match above proves the rebuild, and `docker run --rm <image> python3 --version` runs it

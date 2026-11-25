@@ -1,0 +1,31 @@
+{
+  "bases": [
+    {
+      "digest": "sha256:9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a",
+      "layout": "bases/ubuntu_24.04_9c7f200c07e3.oci",
+      "ref": "ubuntu:24.04@sha256:9c7f200c07e3d4a03e7249d2c16bf66a51120fb876aa2242cf31451412543289"
+    }
+  ],
+  "engine": {
+    "archive": "toolchain/buildkit.tar",
+    "image_digest": "sha256:e0e67ea9c4bb07bdef683e29f70f3b623d1eb9c82274a9ec04e6bb0511449fb0",
+    "kind": "buildkit",
+    "tag": "moby/buildkit:v0.31.2"
+  },
+  "inputs": {
+    "context": ".",
+    "dockerfile": "Dockerfile.offline.pinned",
+    "mtime_policy": "clamp",
+    "source_date_epoch": 1795161196,
+    "tree_hash": "sha256:40f21d534084a7f7fa89652f14ef7243c3bb202b49e220782ce706b245a3377d"
+  },
+  "probe": {
+    "skip": "this image is a language runtime with no long-running service; the digest match above proves the rebuild, and `docker run --rm <image> python3 --version` runs it"
+  },
+  "schema": "readystack-rebuild-bundle/v0.1",
+  "subject": {
+    "config_digest": "sha256:d00abab513d818c09a94ba818d8631f3338ad61406884a58353c6118ef7bcac4",
+    "image_manifest_digest": "sha256:3462077840ba492828e31c29d7670a9b8f59a72f01d2255f6bc0fe1e02c7698e",
+    "name": "docker.io/readystack/python:3.15.2-CE-ubuntu24.04-r5"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "kitforge.build_recipe.v1",
+  "slug": "python",
+  "image": "readystack/python:3.15.2-CE-ubuntu24.04-r5",
+  "build_method": "source-rebuild-python",
+  "source": {
+    "repo": "https://github.com/python/cpython",
+    "ref": "v3.15.2",
+    "commit": "5e58eaad7c58df58dfa8ea549c87996e01dd1077",
+    "source_date_epoch": 1795161196,
+    "source_date_epoch_provenance": "the time release 3.15.2-CE-ubuntu24.04-r5 was cut (2026-11-20T07:53:16Z), by scripts/retarget.py --rev-bump: ReadyStack dates an image by when its release was packaged (owner 2026-11-10), recorded here once and used by every rebuild of the release; it builds upstream commit 5e58eaad7c58, dated 2026-10-25T16:57:51Z (source.commit_epoch).",
+    "python_version": "3.15",
+    "python_runtime": {
+      "provider": "ubuntu-source",
+      "version": "3.15.2",
+      "sha256": "8b5536d280142ecf6cdfe15d12a21ba1c65e300bbf7b28a8d0cdb849575797de"
+    },
+    "_python_runtime_note": "sha256 from python.org's release API (scripts/cpython-pin.py 3.15.2). The tarball is the source the offline build compiles; vendored/python-src is the same tarball extracted, as the archive's source tree.",
+    "vendored_deps": true,
+    "pip_vendor_drop": [
+      {
+        "module": "pkg_resources",
+        "component": "setuptools",
+        "why": "pip vendors setuptools 70.3.0 as pip/_vendor/pkg_resources (the module only, not setuptools.package_index where CVE-2025-47273 is). It is used only by pip's pkg_resources metadata backend, which pip 26.3 cannot select on Python 3.14+ (pip/_internal/metadata/__init__.py), so on 3.15 it is never imported. Dropped with its lines in pip's RECORD, vendor.txt and bom.cdx.json so the image declares what it holds; the vendor-stage version of pip stays intact."
+      }
+    ],
+    "source_date_epoch_basis": "release-cut",
+    "commit_epoch": 1792947471
+  },
+  "product_kind": "runtime",
+  "binaries_from_source": null,
+  "runtime_packages": []
+}
