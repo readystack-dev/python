@@ -5,7 +5,25 @@ The offline build kit for the Docker image `readystack/python:3.15.2-CE-ubuntu24
 - Release: [3.15.2-CE-ubuntu24.04-r5](https://github.com/readystack-dev/python/releases/tag/3.15.2-CE-ubuntu24.04-r5)
 - Image: [`docker.io/readystack/python:3.15.2-CE-ubuntu24.04-r5`](https://hub.docker.com/r/readystack/python/tags), manifest digest `sha256:3462077840ba492828e31c29d7670a9b8f59a72f01d2255f6bc0fe1e02c7698e`
 - Product page: https://readystack.dev/products/python
+- Source and build recipe: https://readystack.dev/products/python/recipe
+- Build trail: https://readystack.dev/products/python/trail/3.15.2-CE-ubuntu24.04-r5
 - Defects: this repository's Issues (defects recorded from 25 November 2026 on) and https://readystack.dev/defects.html?product=python
+
+## The image
+
+A language runtime image: use it as the FROM base of your own image, or run a script with `docker run --rm`. It runs no service.
+
+## This release
+
+- Docker Scout policy grade at release: **A** (94%), graded 2026-11-20 with `docker scout policy` (CLI 1.26.0, docker-default configuration).
+  - Docker Scout counts 87 packages with copyleft licences (GPL, LGPL, MPL), all of them operating-system packages (it counts only packages whose licence it can read; the SBOM lists every component).
+- Signed with ReadyStack's release key (fingerprint `04daa92344a52dbc`): https://readystack.dev/keys/cosign.pub.
+- Runs as a non-root user (`python`).
+- Attestations on the image: an SPDX SBOM and SLSA provenance v1.
+- Rebuilt from this kit with network egress blocked on 2026-11-20; the rebuilt image digest is the published one.
+- Base: Ubuntu 24.04.
+
+The current grade, measured again every day, is on https://readystack.dev/products/python.
 
 Python is distributed under its upstream licence (Python-2.0); the kit contains upstream's source under that licence, and each vendored component under its own.
 
@@ -39,3 +57,5 @@ The build trail (`ReadyStack-python-3.15.2-CE-ubuntu24.04-r5.trail.json`, signed
 ## This repository
 
 `recipe/` holds the kit's recipe files (Dockerfiles, build scripts, pins) as published at https://readystack.dev/products/python/recipe. The complete kit is the release download. Each release is a tag here.
+
+— ReadyStack · https://readystack.dev
