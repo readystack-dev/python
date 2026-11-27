@@ -1,14 +1,14 @@
 {
   "schema": "kitforge.build_recipe.v1",
   "slug": "python",
-  "image": "readystack/python:3.15.2-CE-ubuntu24.04-r5",
+  "image": "readystack/python:3.15.2-CE-ubuntu24.04-r6",
   "build_method": "source-rebuild-python",
   "source": {
     "repo": "https://github.com/python/cpython",
     "ref": "v3.15.2",
     "commit": "5e58eaad7c58df58dfa8ea549c87996e01dd1077",
-    "source_date_epoch": 1795161196,
-    "source_date_epoch_provenance": "the time release 3.15.2-CE-ubuntu24.04-r5 was cut (2026-11-20T07:53:16Z), by scripts/retarget.py --rev-bump: ReadyStack dates an image by when its release was packaged (owner 2026-11-10), recorded here once and used by every rebuild of the release; it builds upstream commit 5e58eaad7c58, dated 2026-10-25T16:57:51Z (source.commit_epoch).",
+    "source_date_epoch": 1795644296,
+    "source_date_epoch_provenance": "the time release 3.15.2-CE-ubuntu24.04-r6 was cut (2026-11-25T22:04:56Z), by scripts/rerelease-agenda.py: ReadyStack dates an image by when its release was packaged (owner 2026-11-10), recorded here once and used by every rebuild of the release; it builds upstream commit 5e58eaad7c58, dated 2026-10-25T16:57:51Z (source.commit_epoch).",
     "python_version": "3.15",
     "python_runtime": {
       "provider": "ubuntu-source",

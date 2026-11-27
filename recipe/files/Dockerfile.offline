@@ -2,7 +2,7 @@
 # from python.org's tarball (sha256 re-checked) and the vendored build debs, by the same command the vendor
 # stage ran, linked against Ubuntu's libraries; the runtime takes /usr/local from it and none of the toolchain.
 FROM ubuntu:24.04@sha256:9c7f200c07e3d4a03e7249d2c16bf66a51120fb876aa2242cf31451412543289 AS cpython
-ARG SOURCE_DATE_EPOCH=1795161196
+ARG SOURCE_DATE_EPOCH=1795644296
 ENV SOURCE_DATE_EPOCH=${SOURCE_DATE_EPOCH}
 COPY vendored/python/debs/ /tmp/cpython-debs/
 COPY vendored/python/Python-3.15.2.tar.xz /tmp/Python-3.15.2.tar.xz
@@ -74,7 +74,7 @@ RUN --mount=type=bind,source=vendored/debs,target=/tmp/debs \
     ldconfig && \
     rm -rf /var/lib/apt/lists/* \
            /var/log/dpkg.log /var/log/alternatives.log /var/log/apt /var/cache/ldconfig/aux-cache /var/cache/fontconfig
-ARG SOURCE_DATE_EPOCH=1795161196
+ARG SOURCE_DATE_EPOCH=1795644296
 RUN groupadd -r python && useradd -r -g python -d /home/python -m python && \
     : "${SOURCE_DATE_EPOCH:?SOURCE_DATE_EPOCH must be set for a reproducible build}" && \
     sed -ri "s/^([^:]*:[^:]*):[0-9]*:/\1:$((SOURCE_DATE_EPOCH/86400)):/" /etc/shadow && \
@@ -83,7 +83,7 @@ LABEL org.opencontainers.image.licenses="Python-2.0"
 LABEL org.opencontainers.image.title="Python"
 LABEL org.opencontainers.image.source="https://github.com/python/cpython"
 LABEL org.opencontainers.image.description="CPython 3.15.2 language runtime, built from source, non-root"
-LABEL org.opencontainers.image.version="3.15.2-CE-ubuntu24.04-r5"
+LABEL org.opencontainers.image.version="3.15.2-CE-ubuntu24.04-r6"
 LABEL org.opencontainers.image.revision="5e58eaad7c58df58dfa8ea549c87996e01dd1077"
 USER python
 WORKDIR /home/python

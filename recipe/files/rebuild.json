@@ -16,16 +16,16 @@
     "context": ".",
     "dockerfile": "Dockerfile.offline.pinned",
     "mtime_policy": "clamp",
-    "source_date_epoch": 1795161196,
-    "tree_hash": "sha256:40f21d534084a7f7fa89652f14ef7243c3bb202b49e220782ce706b245a3377d"
+    "source_date_epoch": 1795644296,
+    "tree_hash": "sha256:d37ce21e617c30d786876f2a2aef072c34e329fcc912f8e9983ce0adb08fee45"
   },
   "probe": {
     "skip": "this image is a language runtime with no long-running service; the digest match above proves the rebuild, and `docker run --rm <image> python3 --version` runs it"
   },
   "schema": "readystack-rebuild-bundle/v0.1",
   "subject": {
-    "config_digest": "sha256:d00abab513d818c09a94ba818d8631f3338ad61406884a58353c6118ef7bcac4",
-    "image_manifest_digest": "sha256:3462077840ba492828e31c29d7670a9b8f59a72f01d2255f6bc0fe1e02c7698e",
-    "name": "docker.io/readystack/python:3.15.2-CE-ubuntu24.04-r5"
+    "config_digest": "sha256:17a4a1ea864dcbf9684b54a27a23293898a6e8d45554839043816bb9c13b4a75",
+    "image_manifest_digest": "sha256:0618c30e949f3999fe740e261d61afb259fc8a73dbac8c30700816fb355ac9fc",
+    "name": "docker.io/readystack/python:3.15.2-CE-ubuntu24.04-r6"
   }
 }

@@ -1,6 +1,6 @@
-image_manifest_digest=sha256:3462077840ba492828e31c29d7670a9b8f59a72f01d2255f6bc0fe1e02c7698e
-config_digest=sha256:d00abab513d818c09a94ba818d8631f3338ad61406884a58353c6118ef7bcac4
-tag=readystack/python:3.15.2-CE-ubuntu24.04-r5
+image_manifest_digest=sha256:0618c30e949f3999fe740e261d61afb259fc8a73dbac8c30700816fb355ac9fc
+config_digest=sha256:17a4a1ea864dcbf9684b54a27a23293898a6e8d45554839043816bb9c13b4a75
+tag=readystack/python:3.15.2-CE-ubuntu24.04-r6
 probe_port=80
 probe_path=/
 probe_timeout=180
